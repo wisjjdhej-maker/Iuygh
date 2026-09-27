@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>กีฬาสี 2568 | SPORT DAY</title>
+<style>
+:root{--p:#ff5722;--p2:#e64a19;--y:#ffc107;--bg:#fff8f5;--t:#2b1a12;--m:#7a6a60;}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Segoe UI","Sarabun",sans-serif;background:var(--bg);color:var(--t);line-height:1.7}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+.navbar{position:sticky;top:0;z-index:99;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:2px solid var(--p)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{font-weight:900;color:var(--p2);font-size:1.15rem;text-decoration:none}
+.nav-links{display:flex;gap:4px;list-style:none;align-items:center}
+.nav-links a{text-decoration:none;color:var(--t);font-weight:700;font-size:.92rem;padding:8px 12px;border-radius:8px;transition:.2s}
+.nav-links a:hover{background:rgba(255,87,34,.12);color:var(--p)}
+.nav-cta{background:var(--p)!important;color:#fff!important;padding:8px 18px!important}
+.nav-cta:hover{background:var(--p2)!important}
+.hamburger{display:none;background:none;border:none;font-size:1.6rem;color:var(--p);cursor:pointer}
+.hero{background:linear-gradient(135deg,#e64a19,#ff5722 60%,#ff9800);color:#fff;padding:80px 0;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(255,193,7,.4),transparent 65%);top:-250px;right:-150px}
+.hero-inner{position:relative;z-index:2}
+.tag{display:inline-block;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.4);padding:6px 18px;border-radius:999px;font-size:.82rem;font-weight:800;letter-spacing:2px;margin-bottom:16px}
+.hero h1{font-size:clamp(2rem,6vw,3.6rem);font-weight:900;line-height:1.2;margin-bottom:14px}
+.hero h1 span{color:var(--y)}
+.hero p{max-width:600px;margin:0 auto 28px;color:rgba(255,255,255,.92)}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;font-weight:800;padding:14px 30px;border-radius:999px;transition:.25s}
+.btn-p{background:var(--y);color:var(--t);box-shadow:0 10px 24px rgba(255,193,7,.5)}
+.btn-p:hover{transform:translateY(-3px);box-shadow:0 14px 28px rgba(255,193,7,.6)}
+.btn-g{color:#fff;border:2px solid rgba(255,255,255,.7)}
+.btn-g:hover{background:rgba(255,255,255,.15)}
+.chips{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:38px;position:relative;z-index:2}
+.chip{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);border-radius:14px;padding:10px 20px;font-size:.88rem;font-weight:800}
+section{padding:64px 0}
+.head{text-align:center;margin-bottom:42px}
+.head .eyebrow{display:inline-block;background:rgba(255,87,34,.14);color:var(--p);padding:5px 16px;border-radius:999px;font-size:.78rem;font-weight:900;letter-spacing:1.5px;margin-bottom:12px}
+.head h2{font-size:clamp(1.5rem,4vw,2rem);color:var(--p2);font-weight:900;margin-bottom:8px}
+.head p{color:var(--m);max-width:580px;margin:0 auto;font-size:.96rem}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#fff;border-radius:18px;padding:28px 24px;box-shadow:0 10px 26px rgba(230,74,25,.08);border-top:5px solid var(--p);transition:.25s}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 36px rgba(230,74,25,.16)}
+.card .ic{font-size:2.2rem;margin-bottom:12px}
+.card h3{color:var(--p2);margin-bottom:8px;font-size:1.08rem}
+.card p{color:var(--m);font-size:.92rem}
+.sched{background:#fff;border-radius:18px;box-shadow:0 10px 26px rgba(230,74,25,.08);overflow:hidden}
+.srow{display:grid;grid-template-columns:140px 1fr;gap:20px;padding:18px 26px;border-bottom:1px solid #ffe3d5;align-items:center}
+.srow:last-child{border:none}
+.srow:hover{background:#fff4ee}
+.stime{background:rgba(255,87,34,.12);color:var(--p);font-weight:900;padding:6px 12px;border-radius:10px;text-align:center;font-size:.9rem}
+.stitle{color:var(--p2);font-weight:800}
+.sdesc{color:var(--m);font-size:.86rem}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.gi{aspect-ratio:4/3;border-radius:16px;display:grid;place-items:center;font-size:2.4rem;color:#fff;box-shadow:0 8px 20px rgba(0,0,0,.12);transition:.3s;cursor:pointer;position:relative;overflow:hidden}
+.gi::after{content:attr(data-l);position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.7));padding:22px 14px 10px;font-size:.82rem;font-weight:800;text-align:left}
+.gi:hover{transform:scale(1.04)}
+.g1{background:linear-gradient(135deg,#ff5722,#ff9800)}
+.g2{background:linear-gradient(135deg,#e64a19,#ff7043)}
+.g3{background:linear-gradient(135deg,#ffc107,#ff9800)}
+.g4{background:linear-gradient(135deg,#d84315,#ff5722)}
+.g5{background:linear-gradient(135deg,#ff9800,#ffc107)}
+.g6{background:linear-gradient(135deg,#bf360c,#e64a19)}
+.cta{background:linear-gradient(135deg,#bf360c,#ff5722);color:#fff;border-radius:22px;padding:50px 30px;text-align:center;box-shadow:0 20px 40px rgba(230,74,25,.3)}
+.cta h2{font-size:clamp(1.4rem,3.5vw,1.9rem);margin-bottom:12px}
+.cta p{max-width:520px;margin:0 auto 26px;opacity:.92}
+.contacts{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.cc{background:#fff;border-radius:16px;padding:24px 18px;text-align:center;box-shadow:0 8px 20px rgba(230,74,25,.08)}
+.cc .ic{font-size:1.6rem;margin-bottom:8px}
+.cc h4{color:var(--m);font-size:.8rem;letter-spacing:.5px;margin-bottom:6px;text-transform:uppercase}
+.cc p{color:var(--p2);font-weight:800;font-size:.92rem}
+footer{background:#bf360c;color:rgba(255,255,255,.8);padding:36px 0 24px;text-align:center;font-size:.88rem}
+footer .fl{font-weight:900;color:#fff;font-size:1.1rem;margin-bottom:8px}
+footer .fl span{color:var(--y)}
+footer .fnav{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin:14px 0;list-style:none}
+footer .fnav a{color:rgba(255,255,255,.85);text-decoration:none;font-weight:600}
+footer .fnav a:hover{color:var(--y)}
+footer .cp{border-top:1px solid rgba(255,255,255,.15);padding-top:14px;font-size:.8rem;opacity:.7;margin-top:14px}
+@media(max-width:900px){.cards,.contacts{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.hamburger{display:block}.nav-links{position:absolute;top:66px;left:0;right:0;background:#fff;flex-direction:column;align-items:stretch;padding:10px 14px 16px;box-shadow:0 12px 24px rgba(0,0,0,.1);display:none}.nav-links.open{display:flex}.cards{grid-template-columns:1fr}.gal{grid-template-columns:1fr 1fr}.srow{grid-template-columns:1fr;gap:6px;padding:16px 20px}}
+@media(max-width:420px){.gal,.contacts{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav class="navbar"><div class="container nav-inner">
+<a href="#top" class="logo">🏆 SPORT DAY</a>
+<button class="hamburger" id="hb">☰</button>
+<ul class="nav-links" id="nl">
+<li><a href="#about">รายละเอียด</a></li>
+<li><a href="#act">กิจกรรม</a></li>
+<li><a href="#sch">กำหนดการ</a></li>
+<li><a href="#gal">Gallery</a></li>
+<li><a href="#ct">ติดต่อ</a></li>
+<li><a href="#reg" class="nav-cta">สมัคร</a></li>
+</ul>
+</div></nav>
+
+<header class="hero" id="top"><div class="container hero-inner">
+<span class="tag">SPORT DAY 2025</span>
+<h1>กีฬาสี <span>รวมใจทุกสี</span><br>สู้ให้สุดแรงเชียร์</h1>
+<p>การแข่งขันกีฬาสีประจำปีของโรงเรียน มาร่วมเชียร์ ร่วมเล่น และสร้างความทรงจำด้วยกัน</p>
+<div class="btns">
+<a href="#reg" class="btn btn-p">สมัครเข้าร่วม</a>
+<a href="#act" class="btn btn-g">ดูกิจกรรม</a>
+</div>
+</div>
+<div class="container chips">
+<div class="chip">📅 เสาร์ 20 ธ.ค. 2568</div>
+<div class="chip">⏰ 07.30 – 17.00 น.</div>
+<div class="chip">📍 สนามกีฬาโรงเรียน</div>
+</div></header>
+
+<section id="about"><div class="container">
+<div class="head"><span class="eyebrow">ABOUT</span><h2>รายละเอียดงาน</h2><p>เทศกาลกีฬาสีที่สนุกที่สุดของปี</p></div>
+<div class="cards">
+<div class="card"><div class="ic">🏃</div><h3>แข่งกีฬาหลากหลาย</h3><p>ฟุตบอล บาสเกตบอล วอลเลย์บอล แชร์บอล และกรีฑา</p></div>
+<div class="card"><div class="ic">🎺</div><h3>ขบวนพาเหรด</h3><p>แต่ละสีจัดขบวนสุดอลังการ แข่งความคิดสร้างสรรค์</p></div>
+<div class="card"><div class="ic">📣</div><h3>กองเชียร์</h3><p>เชียร์ลีดเดอร์และสแตนด์เชียร์สุดมันส์</p></div>
+</div></div></section>
+
+<section id="act" style="background:#fff"><div class="container">
+<div class="head"><span class="eyebrow">HIGHLIGHT</span><h2>กิจกรรมเด่น</h2></div>
+<div class="cards">
+<div class="card"><div class="ic">⚽</div><h3>ฟุตบอลชิงถ้วย</h3><p>การแข่งขันฟุตบอลชาย–หญิงระหว่างสี</p></div>
+<div class="card"><div class="ic">🏀</div><h3>บาสเกตบอล 3x3</h3><p>การแข่งขันแบบเร็ว สนุก และตื่นเต้น</p></div>
+<div class="card"><div class="ic">🏅</div><h3>กรีฑา & ผลัด</h3><p>แข่งวิ่งผลัด 4x100 เมตร ปิดท้ายด้วยแชมป์</p></div>
+</div></div></section>
+
+<section id="sch"><div class="container">
+<div class="head"><span class="eyebrow">SCHEDULE</span><h2>กำหนดการ</h2><p>เสาร์ที่ 20 ธันวาคม 2568</p></div>
+<div class="sched">
+<div class="srow"><div class="stime">07.30 – 08.30</div><div><div class="stitle">ลงทะเบียน & รวมพล</div><div class="sdesc">แต่ละสีรวมตัวที่ลานหน้าเวที</div></div></div>
+<div class="srow"><div class="stime">08.30 – 09.30</div><div><div class="stitle">พิธีเปิด & ขบวนพาเหรด</div><div class="sdesc">เดินขบวนรอบสนาม พร้อมโชว์จากแต่ละสี</div></div></div>
+<div class="srow"><div class="stime">09.30 – 12.00</div><div><div class="stitle">การแข่งขันรอบคัดเลือก</div><div class="sdesc">ฟุตบอล บาส วอลเลย์บอล</div></div></div>
+<div class="srow"><div class="stime">12.00 – 13.00</div><div><div class="stitle">พักเที่ยง</div><div class="sdesc">มีซุ้มอาหารให้บริการ</div></div></div>
+<div class="srow"><div class="stime">13.00 – 15.30</div><div><div class="stitle">การแข่งขันรอบชิงชนะเลิศ</div><div class="sdesc">บาส 3x3 และฟุตบอลชิงถ้วย</div></div></div>
+<div class="srow"><div class="stime">15.30 – 17.00</div><div><div class="stitle">พิธีปิด & มอบรางวัล</div><div class="sdesc">ประกาศผลและถ้วยรางวัลรวม</div></div></div>
+</div></div></section>
+
+<section id="gal" style="background:#fff"><div class="container">
+<div class="head"><span class="eyebrow">GALLERY</span><h2>บรรยากาศงาน</h2></div>
+<div class="gal">
+<div class="gi g1" data-l="ขบวนพาเหรด">🎉</div>
+<div class="gi g2" data-l="กองเชียร์">📣</div>
+<div class="gi g3" data-l="ฟุตบอล">⚽</div>
+<div class="gi g4" data-l="บาสเกตบอล">🏀</div>
+<div class="gi g5" data-l="กรีฑา">🏅</div>
+<div class="gi g6" data-l="มอบรางวัล">🏆</div>
+</div></div></section>
+
+<section id="reg"><div class="container"><div class="cta">
+<h2>พร้อมลงสนามแล้วหรือยัง?</h2>
+<p>สมัครเข้าร่วมกีฬาสี ลงชื่อให้สีของคุณวันนี้</p>
+<a href="#ct" class="btn btn-p">สมัครเข้าร่วม</a>
+</div></div></section>
+
+<section id="ct" style="background:#fff"><div class="container">
+<div class="head"><span class="eyebrow">CONTACT</span><h2>ติดต่อ</h2></div>
+<div class="contacts">
+<div class="cc"><div class="ic">📞</div><h4>โทร</h4><p>02-123-4567</p></div>
+<div class="cc"><div class="ic">✉️</div><h4>อีเมล</h4><p>sport@school.ac.th</p></div>
+<div class="cc"><div class="ic">💚</div><h4>LINE</h4><p>@sportday</p></div>
+<div class="cc"><div class="ic">📘</div><h4>Facebook</h4><p>กีฬาสีโรงเรียน</p></div>
+</div></div></section>
+
+<footer><div class="container">
+<div class="fl">SPORT DAY <span>2025</span></div>
+<ul class="fnav"><li><a href="#about">รายละเอียด</a></li><li><a href="#act">กิจกรรม</a></li><li><a href="#sch">กำหนดการ</a></li><li><a href="#gal">Gallery</a></li><li><a href="#reg">สมัคร</a></li><li><a href="#ct">ติดต่อ</a></li></ul>
+<div class="cp">© 2568 งานกีฬาสีโรงเรียน · สงวนลิขสิทธิ์</div>
+</div></footer>
+
+<script>
+const hb=document.getElementById('hb'),nl=document.getElementById('nl');
+hb.onclick=()=>nl.classList.toggle('open');
+nl.querySelectorAll('a').forEach(a=>a.onclick=()=>nl.classList.remove('open'));
+</script>
+</body>
+</html>
